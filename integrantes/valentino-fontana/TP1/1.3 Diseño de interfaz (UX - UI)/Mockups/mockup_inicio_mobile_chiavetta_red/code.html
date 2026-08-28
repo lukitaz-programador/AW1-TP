@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chiavetta Detailing - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#131313",
+                      "surface-dim": "#131313",
+                      "surface-bright": "#393939",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-container-low": "#1b1b1b",
+                      "surface-container": "#1f1f1f",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-container-highest": "#353535",
+                      "on-surface": "#e4e2e2",
+                      "on-surface-variant": "#c6c6c6",
+                      "outline": "#909090",
+                      "outline-variant": "#464646",
+                      "inverse-surface": "#e4e2e2",
+                      "inverse-on-surface": "#303030",
+                      "surface-tint": "#ffb4a9",
+                      "primary": "#ffb4a9",
+                      "on-primary": "#690003",
+                      "primary-container": "#930007",
+                      "on-primary-container": "#ffdad5",
+                      "inverse-primary": "#c00010",
+                      "secondary": "#e7bdb7",
+                      "on-secondary": "#442926",
+                      "secondary-container": "#5d3f3b",
+                      "on-secondary-container": "#ffdad5",
+                      "tertiary": "#dfc38c",
+                      "on-tertiary": "#3f2e04",
+                      "tertiary-container": "#574419",
+                      "on-tertiary-container": "#fcdfa6",
+                      "error": "#ffb4ab",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "on-error-container": "#ffdad6",
+                      "background": "#131313",
+                      "on-background": "#e4e2e2",
+                      "primary-fixed": "#ffdad5",
+                      "primary-fixed-dim": "#ffb4a9",
+                      "on-primary-fixed": "#410001",
+                      "on-primary-fixed-variant": "#930007",
+                      "secondary-fixed": "#ffdad5",
+                      "secondary-fixed-dim": "#e7bdb7",
+                      "on-secondary-fixed": "#2c1512",
+                      "on-secondary-fixed-variant": "#5d3f3b",
+                      "tertiary-fixed": "#fcdfa6",
+                      "tertiary-fixed-dim": "#dfc38c",
+                      "on-tertiary-fixed": "#261900",
+                      "on-tertiary-fixed-variant": "#574419"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "max-width": "1280px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-sm": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased pb-24 md:pb-0">
+<!-- TopNavBar (Mobile View - Nav links hidden) -->
+<header class="bg-surface border-b border-outline-variant sticky top-0 z-40">
+<div class="flex justify-between items-center px-margin-mobile py-4 w-full mx-auto md:px-margin-desktop md:max-w-max-width">
+<!-- Brand -->
+<div class="text-headline-sm font-headline-sm font-bold text-primary flex items-center gap-2">
+<img alt="Chiavetta Detailing Logo" class="h-10 w-10 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmsY8Kq6pmmLl5PsVrNl5BUI0E1JXZxcYW_XBSwqRrFOgGOrXdoxwWvbNn1LEO-mVYLOt49kAm220GWnyT2V53iapve1X8WcZjA70-8t8xCD0Bji54-hV5GH0SIs_iUhsHiBsPjA0ONSYGtd17jyMSszEBTPg_CG_vSIs4V2cUMc-eLbi72uS33TFsSQ-unZiAnGoask9p1P6P_pNikBcj0EYBqcnfdZO718SJ9gljhYnFWLa95INR53-K-EuT3bB3VA"/>
+                Chiavetta Detailing
+            </div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="text-primary hover:text-primary transition-colors flex items-center justify-center w-10 h-10 rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[530px] min-h-[400px] flex items-end pb-12 px-margin-mobile" data-alt="A pristine, dark metallic sports car parked inside a modern, brightly lit detailing studio. The car's paint is perfectly reflective, showing off a flawless ceramic coating finish. High-tech LED light bars are reflected on the hood. Corporate blue and bright green lighting accents softly illuminate the background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBeXuVg-ipDmG9d6ZEJFC-TyHF2WV7aXvbSCxJ8QeBM6CkAophVq8Pjoe3DdiiOKeiGYgXQ9i_Qo8PoTc0xkvBZULvYIOyiQV58QRgNTP2hPEHFlYzM1cymrXMXgawmVNyKRnx5ZibSO1VJ7dVDNem4-SN7idS0lby0wgXXFKprHk8E-2jKf6VJCrthjbVOPl8pbuBoIHXGVWkDAMSD9sO3hzog_XZu7tmHjlYhnKd6NxMBNhMX8B0K')">
+<!-- Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 to-transparent"></div>
+<div class="relative z-10 w-full flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<span class="inline-flex items-center px-3 py-1 bg-surface-tint/20 text-on-secondary border border-surface-tint/30 rounded-full text-label-caps font-label-caps uppercase w-max backdrop-blur-md">
+                        Precision Protection
+                    </span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-surface-container-lowest drop-shadow-md">
+                        Lab-Grade<br/>Automotive Care.
+                    </h1>
+<p class="font-body-lg text-body-lg text-surface-container-lowest max-w-sm opacity-90 drop-shadow">
+                        Engineered ceramic coatings and advanced paint correction for discerning owners.
+                    </p>
+</div>
+<div class="flex gap-4 w-full">
+<button class="flex-1 bg-primary text-on-primary font-headline-sm text-[16px] py-4 px-6 rounded-DEFAULT border-b-2 border-transparent hover:border-surface-tint shadow-[0_4px_20px_rgba(227,6,19,0.15)] transition-all flex items-center justify-center gap-2">
+                        Book Service
+                        <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-12 px-margin-mobile flex flex-col gap-8 bg-surface-container-low">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Core Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Advanced solutions for perfect surfaces.</p>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Service Card 1 -->
+<div class="bg-surface border border-outline-variant rounded-lg p-6 flex flex-col gap-4 shadow-sm hover:shadow-[0_8px_30px_rgba(227,6,19,0.08)] transition-shadow">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_car_wash</span>
+</div>
+<span class="px-2 py-1 bg-secondary-container/20 text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-wider">Premium</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Ceramic Coating</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Multi-year hydrophobic protection bonding at the molecular level.</p>
+</div>
+<div class="flex gap-2 mt-2 flex-wrap">
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full text-label-caps font-label-caps">9H Hardness</span>
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full text-label-caps font-label-caps">5-Yr Warranty</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface border border-outline-variant rounded-lg p-6 flex flex-col gap-4 shadow-sm hover:shadow-[0_8px_30px_rgba(227,6,19,0.08)] transition-shadow">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Paint Correction</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Multi-stage machine compounding to remove defects and holograms.</p>
+</div>
+<div class="flex gap-2 mt-2 flex-wrap">
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full text-label-caps font-label-caps">Swirl Removal</span>
+<span class="px-3 py-1 bg-surface-variant text-on-surface-variant rounded-full text-label-caps font-label-caps">Mirror Finish</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Highlights (Horizontal Scroll) -->
+<section class="py-12 pl-margin-mobile flex flex-col gap-8 bg-surface">
+<div class="pr-margin-mobile flex justify-between items-end">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Pro Shop</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Maintenance products.</p>
+</div>
+<button class="text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1">
+                    View All <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="flex gap-4 overflow-x-auto custom-scrollbar pb-4 pr-margin-mobile">
+<!-- Product 1 -->
+<div class="min-w-[240px] bg-surface border border-outline-variant rounded-lg flex flex-col overflow-hidden">
+<div class="h-40 w-full bg-surface-container-highest relative" data-alt="A sleek, matte black spray bottle with a minimalist label reading 'SiO2 Detailer'. The bottle is positioned on a brushed steel workbench in a modern automotive lab setting, lit by cool, high-key studio lighting reflecting off the bottle." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvAgFB26qcP_aHXfeSXeyFFn0bXreUkHcGTpc3GQqxgGBAB3pPXf4_I_xKA31aLp3I6PjxCwBLqZwSjvVEBps_TypD11JYolCAtkcr-_rbPOw5NLC3-rnaa7cRf9L_nVMbYcozc7pvwcJ3EmR-zXG45CeSMxgYxBkxLIei6CrnBl1njGAx7x3QUCxO0Wlj3gHf4jW5eK7XEUc8ZjN0D_O9ZRoGU9Znt8OXyaLDKTMJaopc8ngxFyN5')">
+<div class="absolute top-2 right-2 bg-primary text-on-primary px-2 py-1 rounded text-[10px] font-bold uppercase">In Stock</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h4 class="font-headline-sm text-[18px] text-on-surface leading-tight">SiO2 Detail Spray</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Ceramic maintenance.</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-headline-sm text-[16px] text-primary">$24.99</span>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-surface-tint transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="min-w-[240px] bg-surface border border-outline-variant rounded-lg flex flex-col overflow-hidden">
+<div class="h-40 w-full bg-surface-container-highest relative" data-alt="A stack of premium, plush microfiber towels in deep corporate blue and bright green edge stitching. They are neatly folded on a clean, white minimalist surface in a brightly lit automotive detailing studio. High-key light highlights the soft texture." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKYPMQ4Zf4-cJYYaZ8q68BYEF0u5ADYWWLLs0MoFlk9yeIlL_5hq6MqHaOChI5kK6xzpjwlIDHEQGP_1dEc8DgeGYanPIE1UyWm_l1Vb2aMVrQ0TPlpli-G_L5lyztImuKbhKPrfaUtLUW7DqqSz784yLOUFf93wHQ78_nxPcdxu25sgKTJtaAx9HdGf9g1JAS3wIbXekzYEh8UYMRV7eFTGNXK2RzcE-H_65WImygABcw_c75b2II')">
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h4 class="font-headline-sm text-[18px] text-on-surface leading-tight">Edgeless Microfiber</h4>
+<p class="font-body-md text-sm text-on-surface-variant">500 GSM, 4-Pack.</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-headline-sm text-[16px] text-primary">$18.00</span>
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-surface-tint transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 bg-surface shadow-[0_-4px_20px_rgba(0,0,0,0.5)] z-50">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 hover:bg-surface-container-high scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<!-- Services (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high px-4 py-1 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-label-caps text-label-caps mt-1">Services</span>
+</a>
+<!-- Shop (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high px-4 py-1 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-caps text-label-caps mt-1">Shop</span>
+</a>
+<!-- Account (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high px-4 py-1 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-label-caps mt-1">Account</span>
+</a>
+</nav>
+</body></html>

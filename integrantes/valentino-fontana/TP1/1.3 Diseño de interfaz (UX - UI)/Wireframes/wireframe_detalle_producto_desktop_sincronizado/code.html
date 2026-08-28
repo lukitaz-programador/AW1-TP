@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail Wireframe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "wire-bg": "#f5f5f5",
+                        "wire-surface": "#ffffff",
+                        "wire-border": "#cccccc",
+                        "wire-text-main": "#333333",
+                        "wire-text-muted": "#666666",
+                        "wire-accent": "#555555",
+                        "wire-accent-light": "#e0e0e0"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "max-width": "1440px"
+                    },
+                    fontFamily: {
+                        "body": ["Inter", "sans-serif"],
+                        "heading": ["Montserrat", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-wire-bg text-wire-text-main font-body antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-wire-surface border-b border-wire-border sticky top-0 z-50">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-max-width mx-auto">
+<a class="flex items-center justify-center bg-wire-accent-light border border-wire-border w-32 h-12 text-wire-text-muted" href="#">
+<span class="material-symbols-outlined">image</span>
+</a>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-wire-text-muted hover:text-wire-text-main transition-colors font-body text-base" href="#">Home</a>
+<a class="text-wire-text-muted hover:text-wire-text-main transition-colors font-body text-base" href="#">Services</a>
+<a class="text-wire-text-main font-bold border-b-2 border-wire-text-main font-body text-base" href="#">Shop</a>
+<a class="text-wire-text-muted hover:text-wire-text-main transition-colors font-body text-base" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-wire-text-main hover:bg-wire-accent-light rounded-full p-2 transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-wire-accent-light border border-wire-border flex items-center justify-center text-wire-text-muted">
+<span class="material-symbols-outlined text-sm">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-max-width mx-auto px-margin-desktop py-24 flex flex-col gap-32 bg-wire-surface mt-8 border border-wire-border shadow-sm">
+<!-- Product Detail Section -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter lg:gap-16">
+<!-- Product Images -->
+<div class="flex flex-col gap-base">
+<div class="bg-wire-accent-light rounded-xl overflow-hidden aspect-square border border-wire-border relative flex items-center justify-center text-wire-text-muted">
+<span class="material-symbols-outlined text-6xl">image</span>
+</div>
+<div class="grid grid-cols-4 gap-base">
+<div class="bg-wire-accent-light rounded-lg aspect-square border border-wire-border flex items-center justify-center text-wire-text-muted">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="bg-wire-accent-light rounded-lg aspect-square border border-wire-border flex items-center justify-center text-wire-text-muted">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="bg-wire-accent-light rounded-lg aspect-square border border-wire-border flex items-center justify-center text-wire-text-muted">
+<span class="material-symbols-outlined">image</span>
+</div>
+<div class="bg-wire-bg rounded-lg aspect-square border border-wire-border flex items-center justify-center text-wire-text-muted font-heading text-xs font-bold tracking-wider">
+                    +2 MORE
+                </div>
+</div>
+</div>
+<!-- Product Info -->
+<div class="flex flex-col">
+<div class="flex flex-col gap-4 mb-8 border-b border-wire-border pb-8">
+<div class="flex gap-2">
+<span class="bg-wire-accent text-wire-surface px-3 py-1 rounded-full font-heading text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+                        Premium Protection
+                    </span>
+<span class="bg-wire-accent-light text-wire-text-main px-3 py-1 rounded-full font-heading text-xs font-bold border border-wire-border">
+                        In Stock
+                    </span>
+</div>
+<h1 class="font-heading text-4xl md:text-5xl font-bold text-wire-text-main leading-tight">Cera Carnauba Premium</h1>
+<p class="font-body text-lg text-wire-text-muted leading-relaxed">
+                    Formulated with the highest grade Brazilian T1 Carnauba, this premium paste wax delivers an unmatched, deep, wet-look gloss while providing robust protection against UV rays, environmental contaminants, and harsh weather conditions. Engineered for perfectionists.
+                </p>
+<div class="font-heading text-3xl font-semibold text-wire-text-main mt-2">
+                    $45,000.00 <span class="font-body text-base text-wire-text-muted ml-2 line-through font-normal">$55,000.00</span>
+</div>
+</div>
+<div class="flex flex-col gap-6 mb-8">
+<h3 class="font-heading text-2xl font-semibold text-wire-text-main">Specifications</h3>
+<ul class="flex flex-col gap-3">
+<li class="flex items-center gap-3 text-wire-text-muted">
+<span class="material-symbols-outlined text-wire-accent">water_drop</span>
+<span class="font-body text-base">Extreme Hydrophobic Properties</span>
+</li>
+<li class="flex items-center gap-3 text-wire-text-muted">
+<span class="material-symbols-outlined text-wire-accent">brightness_high</span>
+<span class="font-body text-base">UV Protection built-in</span>
+</li>
+<li class="flex items-center gap-3 text-wire-text-muted">
+<span class="material-symbols-outlined text-wire-accent">timer</span>
+<span class="font-body text-base">Up to 6 months durability</span>
+</li>
+<li class="flex items-center gap-3 text-wire-text-muted">
+<span class="material-symbols-outlined text-wire-accent">format_paint</span>
+<span class="font-body text-base">Safe for all paint types and colors</span>
+</li>
+</ul>
+</div>
+<div class="flex items-end gap-4 mt-auto">
+<div class="flex flex-col gap-2">
+<label class="font-heading text-xs font-bold text-wire-text-muted uppercase tracking-wider" for="quantity">Quantity</label>
+<div class="flex items-center border border-wire-border rounded-lg bg-wire-surface h-12">
+<button class="px-4 h-full text-wire-text-muted hover:bg-wire-accent-light transition-colors rounded-l-lg border-r border-wire-border flex items-center justify-center">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<input class="w-16 h-full text-center border-none bg-transparent focus:ring-0 font-body text-base text-wire-text-main appearance-none m-0 p-0" id="quantity" min="1" type="number" value="1"/>
+<button class="px-4 h-full text-wire-text-muted hover:bg-wire-accent-light transition-colors rounded-r-lg border-l border-wire-border flex items-center justify-center">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<button class="flex-grow bg-wire-accent text-wire-surface h-12 rounded-lg font-heading text-base font-semibold flex items-center justify-center gap-2 hover:bg-wire-text-main transition-colors uppercase tracking-wider">
+<span class="material-symbols-outlined">shopping_bag</span>
+                    AGREGAR AL CARRITO
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Wireframe -->
+<footer class="bg-wire-surface border-t border-wire-border w-full px-margin-desktop py-12 flex flex-col md:flex-row justify-between gap-gutter max-w-max-width mx-auto mt-16 mb-8">
+<div class="flex flex-col gap-4">
+<div class="font-heading text-xl font-bold text-wire-text-main">Chiavetta Detailing</div>
+<div class="text-wire-text-muted font-body text-sm">
+            © 2024 Chiavetta Detailing. Precision Protection.
+        </div>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="text-wire-text-muted hover:text-wire-text-main transition-colors font-body text-sm" href="#">Privacy Policy</a>
+<a class="text-wire-text-muted hover:text-wire-text-main transition-colors font-body text-sm" href="#">Terms of Service</a>
+<a class="text-wire-text-muted hover:text-wire-text-main transition-colors font-body text-sm" href="#">Contact</a>
+<a class="text-wire-text-muted hover:text-wire-text-main transition-colors font-body text-sm" href="#">FAQ</a>
+</div>
+</footer>
+</body></html>
