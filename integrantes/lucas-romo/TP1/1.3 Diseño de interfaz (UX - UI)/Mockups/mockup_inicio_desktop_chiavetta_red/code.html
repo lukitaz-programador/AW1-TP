@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chiavetta Detailing</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom Before/After Slider specific to this project */
+        .ba-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 0.5rem; /* lg */
+        }
+        .ba-slider .before-img, .ba-slider .after-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .ba-slider .before-img {
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+            z-index: 2;
+        }
+        .ba-slider .after-img {
+            z-index: 1;
+        }
+        .ba-slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background-color: #e30613; /* Primary */
+            z-index: 3;
+            transform: translateX(-50%);
+            cursor: ew-resize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ba-slider-handle::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            background-color: #e30613;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Placeholder for left/right arrows, handled via JS or pseudo elements */
+        }
+        .ba-slider-handle::before {
+             content: '< >';
+             color: white;
+             font-size: 12px;
+             font-weight: bold;
+             position: absolute;
+             z-index: 10;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#0a0a0a",
+                      "on-background": "#e6e1e5",
+                      "surface": "#131313",
+                      "surface-dim": "#131313",
+                      "surface-bright": "#393939",
+                      "surface-container-lowest": "#0e0e0e",
+                      "surface-container-low": "#1b1b1b",
+                      "surface-container": "#212121",
+                      "surface-container-high": "#2b2b2b",
+                      "surface-container-highest": "#363636",
+                      "on-surface": "#e6e1e5",
+                      "on-surface-variant": "#cac4d0",
+                      "primary": "#e30613",
+                      "on-primary": "#ffffff",
+                      "primary-container": "#660004",
+                      "on-primary-container": "#ffdad9",
+                      "primary-fixed": "#ffdad9",
+                      "on-primary-fixed": "#410002",
+                      "primary-fixed-dim": "#ffb4ab",
+                      "on-primary-fixed-variant": "#93000a",
+                      "secondary": "#b0c6ff",
+                      "on-secondary": "#002d6f",
+                      "secondary-container": "#00429c",
+                      "on-secondary-container": "#d9e2ff",
+                      "secondary-fixed": "#d9e2ff",
+                      "on-secondary-fixed": "#001a43",
+                      "secondary-fixed-dim": "#b0c6ff",
+                      "on-secondary-fixed-variant": "#00429c",
+                      "tertiary": "#efb8c8",
+                      "on-tertiary": "#492532",
+                      "tertiary-container": "#633b48",
+                      "on-tertiary-container": "#ffd8e4",
+                      "tertiary-fixed": "#ffd8e4",
+                      "on-tertiary-fixed": "#31111d",
+                      "tertiary-fixed-dim": "#efb8c8",
+                      "on-tertiary-fixed-variant": "#492532",
+                      "error": "#ffb4ab",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "on-error-container": "#ffdad6",
+                      "outline": "#938f99",
+                      "outline-variant": "#49454f",
+                      "inverse-surface": "#e6e1e5",
+                      "inverse-on-surface": "#313033",
+                      "inverse-primary": "#bf0011"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "none": "0",
+                      "sm": "0.5rem",
+                      "md": "0.75rem",
+                      "lg": "1rem",
+                      "xl": "1.5rem",
+                      "2xl": "2rem",
+                      "3xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "base": "8px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "max-width": "1280px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "headline-sm": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "label-caps": [
+                              "Montserrat"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- Top Navigation Bar (JSON Shared Component) -->
+<header class="bg-surface border-b border-outline-variant w-full sticky top-0 z-50">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-max-width mx-auto">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3" href="#">
+<img alt="Chiavetta Detailing" class="h-12 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUbrXMliCEdH_69NRZKk9GnGDFjzkO4ph5EKnN8wq3odoNoTgZEufqd46EQUr0CU-7iNx6egaA4pVogv73UBeRUn7pXzRHMYQE1yBlhwbVYiX-ZfptMi-ZRsUH6BjpsVjtv1KmT5vOnsgvbzOyweAI2Fmq0Doxo8TtbZSoMWExHH4nVYyh-8p81-6hJZDkhj6xdhW4V2IfTGvL2O6b85nmdOqGlnbaGafDil6Y0hQBJS4VfeR0t5v7L28yVOVZlRJFmA"/>
+<span class="font-headline-sm text-headline-sm text-primary font-bold hidden md:block">Chiavetta Detailing</span>
+</a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors pb-1 font-body-md text-body-md" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors pb-1 font-body-md text-body-md" href="#">Shop</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors pb-1 font-body-md text-body-md" href="#">About</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button aria-label="Cart" class="text-on-surface-variant hover:text-primary transition-colors p-2">
+<span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] md:h-[800px] flex items-center justify-center overflow-hidden">
+<!-- Hero Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Sports car in studio" class="w-full h-full object-cover object-center opacity-80" data-alt="A highly detailed, ultra-realistic photograph of a pristine, metallic sports car parked in a modern, high-tech detailing studio. The car's paint is flawlessly polished, reflecting sleek, linear studio lighting that emphasizes its aerodynamic curves. The environment features a polished concrete floor and minimalist architectural elements in sophisticated grays, creating a premium automotive laboratory aesthetic. Deep blacks contrast with bright white specular highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeEU1m7PG6nneh87Pko901w8CxxvNqD9lnrTiEEKrbU10pzDR4BfOUJFDEVtNCcW2ebRfuQ-NTrreUkcTiL5W2Cpg1x0vKXJ_18igpXqs5hwJbmDJl1-6vheovOFmfG1sOETpChsvL6DfhUUcz2F-s2OhwLoyN3nnvB5eq0f9zqy-25_3OAo4TR7MCzSUUxrQH3_TSO6W57PGQIpehs4W4WyPZZlzB0jmb1nEhuypKBkVxIDmmwFyq"/>
+<!-- Overlay to ensure text readability -->
+<div class="absolute inset-0 bg-gradient-to-r from-background/95 via-background/70 to-transparent"></div>
+</div>
+<!-- Hero Content -->
+<div class="relative z-10 w-full max-w-max-width px-margin-mobile md:px-margin-desktop text-left">
+<div class="max-w-2xl">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-6">
+                        Brillo y Protección Profesional
+                    </h1>
+<p class="font-body-lg text-body-lg text-surface-container-highest mb-10 max-w-xl">
+                        Elevamos el estándar del cuidado automotriz con tecnología avanzada y precisión obsesiva para resultados inigualables.
+                    </p>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-body-lg text-body-lg font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-white/20 active:scale-95 flex items-center gap-2">
+                        Agendar Turno
+                        <span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid Style) -->
+<section class="py-20 md:py-[120px] bg-background w-full">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Nuestros Servicios</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Soluciones de alta gama diseñadas para restaurar, proteger y mantener el acabado de su vehículo al más alto nivel.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Ceramic Coating (Large Bento Item) -->
+<div class="col-span-1 md:col-span-8 bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden group hover:border-primary/50 transition-all duration-300 flex flex-col md:flex-row relative">
+<div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+<img alt="Ceramic Coating" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A close-up, macro photography shot of water elegantly beading up and rolling off a flawless, deep blue car hood. The surface is treated with a premium ceramic coating, demonstrating extreme hydrophobicity. The lighting is crisp and technical, highlighting the perfect spherical shape of the water droplets against the glossy, mirror-like finish of the automotive paint. High-tech, clean laboratory aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjmgL_R_sqy_yLIejuLPvod5RRWc9Z3vmwcXn776VdRsgFZKfYVPfDU7WfmBq6v8alzFxg6wLnFrKsJLjqC6BTDGMcnb1xr4GVkqfB6EpZJk2RyCWi9ujcQAbwIsOCN6DHiU6Xn8n0KZGA2dATrj1GVS75BSThM6br8XWTp9dLkw_ZQeqmPoijT8wyUm6jXgZCEy8u4vBko38_bey5Di1EXGDJDOeiYgROcEGnCl0NiamXGx1c1eyF"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-primary/20 backdrop-blur-md text-primary-fixed border border-primary/30 px-3 py-1 rounded-full font-label-caps text-label-caps">Tratamiento Cerámico</span>
+</div>
+</div>
+<div class="p-8 w-full md:w-1/2 flex flex-col justify-center bg-surface z-10 relative">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Protección Extrema</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Blindaje nanotecnológico que ofrece resistencia superior contra rayones, químicos y rayos UV, garantizando un brillo profundo por años.</p>
+<a class="text-primary font-semibold font-body-md text-body-md flex items-center gap-1 group-hover:gap-2 transition-all w-fit" href="#">
+                                 Explorar Tratamientos <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Paint Correction (Medium Bento Item) -->
+<div class="col-span-1 md:col-span-4 bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden group hover:border-primary/50 transition-all duration-300 flex flex-col">
+<div class="h-48 relative overflow-hidden bg-surface-container-low">
+<!-- Before/After Placeholder Concept -->
+<div class="absolute inset-0 flex">
+<div class="w-1/2 h-full bg-surface-variant relative">
+<img alt="Before paint correction" class="w-full h-full object-cover opacity-70" data-alt="A split-screen macro view of automotive paint under harsh inspection lighting. The left side shows dull, heavily swirled, and scratched clear coat in a dark gray tone. The lighting reveals severe micro-marring and oxidation typical of improper washing techniques. The visual style is clinical and diagnostic, emphasizing the defects before correction." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNm8rwwIMyu3HijcIzL31N-FpQGBl8okGGGs10veNEwOCcgUlSGIN-9yi7OL7o3-ci18D-1Hxv5fSDkz95jMfCvM1OGygz0KEshDgBTHkeHTQ2BohU1Ojew93ovi2QfBcpQpAe029r7m6svl7TaXikeYTH6eENdlJH7Gcr5a7WAi0aVZMGRSBwKrL6qgehJ_kq7Mb4Pcf1wKEx0X1wTidsKDIgm0jfAyuTsA9-2DEr9DLyVXQ6Alaz"/>
+<span class="absolute bottom-2 left-2 text-white font-label-caps text-label-caps bg-black/70 backdrop-blur-sm px-2 py-1 rounded">Antes</span>
+</div>
+<div class="w-1/2 h-full bg-surface relative border-l-2 border-primary">
+<img alt="After paint correction" class="w-full h-full object-cover" data-alt="A split-screen macro view of automotive paint under harsh inspection lighting. The right side shows perfectly leveled, flawlessly polished clear coat in a deep, glossy dark gray tone. The inspection light reflects perfectly with no swirls or defects, demonstrating expert paint correction. The visual style is clinical, premium, and showcases technical perfection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY-rp9uLYCx-ViQrqX--gPtGeFd0gozG6czTeRZjHdNLCgOgunBur7adBv2w8WlPRFI6Oze7fE8PjLoL0JinLix1qYAtVyLTVDiP9VtGF8Xae1v4ibqIrKsEcXtOYxi6E9gCCzn72rAKqziRBuVjpZCHn5MZDxGfdjiXyGn6xk5acl3w_CU29sttpA51RHXOzwjIWvru7vGpGGMvKgGFmE8UT-OPBCSl50ouiOc8orIGsbme7FCxyn"/>
+<span class="absolute bottom-2 right-2 text-white font-label-caps text-label-caps bg-black/70 backdrop-blur-sm px-2 py-1 rounded">Después</span>
+</div>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="mb-3">
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-1 rounded font-label-caps text-[10px] uppercase tracking-wider">Pulidos</span>
+</div>
+<h3 class="font-headline-sm text-[20px] leading-tight text-on-surface mb-2">Corrección de Barniz</h3>
+<p class="font-body-md text-[14px] leading-relaxed text-on-surface-variant mb-4 flex-grow">Restauración de la claridad óptica eliminando micro-rayas y hologramas.</p>
+<a class="text-primary font-semibold font-body-md text-[14px] flex items-center gap-1 w-fit" href="#">
+                                 Ver proceso <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Premium Wash (Medium Bento Item) -->
+<div class="col-span-1 md:col-span-4 bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden group hover:border-primary/50 transition-all duration-300 flex flex-col">
+<div class="h-48 relative overflow-hidden bg-surface-container-low p-6 flex items-center justify-center">
+<!-- Technical Iconography representation instead of photo -->
+<div class="w-24 h-24 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[48px]" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow border-t border-outline-variant/30">
+<div class="mb-3">
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-1 rounded font-label-caps text-[10px] uppercase tracking-wider">Lavados</span>
+</div>
+<h3 class="font-headline-sm text-[20px] leading-tight text-on-surface mb-2">Lavado Detallado</h3>
+<p class="font-body-md text-[14px] leading-relaxed text-on-surface-variant mb-4 flex-grow">Limpieza profunda y segura con método de dos baldes y pH neutro.</p>
+<a class="text-primary font-semibold font-body-md text-[14px] flex items-center gap-1 w-fit" href="#">
+                                 Agendar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Interior Detailing (Medium Bento Item) -->
+<div class="col-span-1 md:col-span-8 bg-surface rounded-2xl border border-outline-variant/30 overflow-hidden group hover:border-primary/50 transition-all duration-300 flex flex-col md:flex-row relative">
+<div class="p-8 w-full md:w-1/2 flex flex-col justify-center bg-surface z-10 order-2 md:order-1">
+<div class="mb-3">
+<span class="bg-surface-container-highest text-on-surface-variant px-2 py-1 rounded font-label-caps text-[10px] uppercase tracking-wider">Interiores</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Renovación de Habitáculo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Limpieza a vapor, extracción de tapizados y acondicionamiento de cueros con protección UV de grado aeronáutico.</p>
+<a class="text-primary font-semibold font-body-md text-body-md flex items-center gap-1 group-hover:gap-2 transition-all w-fit" href="#">
+                                 Ver Opciones <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden order-1 md:order-2">
+<img alt="Interior Detailing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A pristine, high-end luxury car interior. The seats are crafted from impeccably clean, matte-finish beige leather. The dashboard features polished carbon fiber trim reflecting cool, modern studio lighting. The focus is on the flawless cleanliness and texture of the materials, highlighting the results of professional interior detailing. The mood is sophisticated, quiet, and opulent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT0NH16I8kmMljkZr_BPluDLd-GrZceo1VxYIQTDQLN4LUnpJc24g6rLFfn9GH5W_GNZOBIXlqF_TwGqA3ccOU7flVncRpMVANXeH-lY4jy3CjGOp8x4cPQ1vrQfubnlm76XayCJPwAZ8ehhbRjviAThhG45GKxb4zEaKEPl_7VsceRSUaB52OF0UZ0KohIXgp2H6ojEn3IC7gZQqWs8UbqIfNxPKwcTyEvzLctkhlwx3nsp0vpKQt"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (JSON Shared Component) -->
+<footer class="bg-surface-container-low w-full border-t border-outline-variant/30">
+<div class="w-full px-margin-desktop py-20 flex flex-col md:flex-row justify-between gap-gutter max-w-max-width mx-auto">
+<div class="flex flex-col gap-4 max-w-sm">
+<a class="flex items-center gap-3" href="#">
+<img alt="Chiavetta Detailing" class="h-10 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWWYz90139Vd4SG0lBdDsnggghqjJ9ZH99lLB1sJr3nUqupoMPvJ4bTENWHB2xsrLZEMKo8Q6tlHPPjoBeZiYwVQPn_0lZV31w4EtO8iV2iq_98LaeAf2yoM1CDV3X3RRWliJrkAZYZDKXAzqPC27Yo2HTO82mXx-DjFkdttdAtUPN7ArgTbza9Jyzg3hUHXaw839mrcoZWd346rvOd6I6msZ57YtiHW0e5Vwm3GZDP1rftE9j8XZcuuKp10BXbN0nmg"/>
+<span class="font-headline-sm text-[20px] text-primary font-bold">Chiavetta Detailing</span>
+</a>
+<p class="font-body-md text-body-md text-on-surface-variant">Estudio de estética vehicular de alta gama. Precisión, protección y pasión por los detalles.</p>
+<div class="flex gap-4 mt-2">
+<!-- Social Placeholders -->
+<a aria-label="Instagram" class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a aria-label="Facebook" class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">thumb_up</span>
+</a>
+<a aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-headline-sm text-[18px] text-on-surface mb-2">Contacto</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Av. Libertador 1234, CABA
+                </a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">call</span> +54 9 11 1234-5678
+                </a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">mail</span> info@chiavettadetailing.com
+                </a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-headline-sm text-[18px] text-on-surface mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">FAQ</a>
+</div>
+</div>
+<div class="w-full text-center py-4 border-t border-outline-variant/30">
+<p class="font-body-md text-[14px] text-on-surface-variant">© 2024 Chiavetta Detailing. Precision Protection.</p>
+</div>
+</footer>
+<!-- Bottom Navigation Bar (JSON Shared Component - Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 border-t border-outline-variant/30 bg-surface z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.3)]">
+<a class="flex flex-col items-center justify-center bg-primary/20 text-primary-fixed rounded-full px-4 py-1 scale-90 transition-all font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined text-[24px]">home</span>
+            Home
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-1 rounded-full font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined text-[24px]">build</span>
+            Services
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-1 rounded-full font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+            Shop
+        </a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors px-4 py-1 rounded-full font-label-caps text-label-caps" href="#">
+<span class="material-symbols-outlined text-[24px]">person</span>
+            Account
+        </a>
+</nav>
+</body></html>
