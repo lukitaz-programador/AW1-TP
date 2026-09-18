@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" role="img" aria-label="Antes y después - Protección Cerámica">
+  <rect width="1000" height="650" fill="#e5e7eb"/>
+  <rect x="8" y="8" width="984" height="634" fill="none" stroke="#9ca3af" stroke-width="3" stroke-dasharray="10 8"/>
+  <circle cx="500.0" cy="297.0" r="24" fill="none" stroke="#9ca3af" stroke-width="6"/>
+  <path d="M450.0 355.0 l35 -40 l25 28 l20 -22 l35 34 z" fill="#9ca3af"/>
+  <text x="50%" y="395.0" font-family="Arial, sans-serif" font-size="20" fill="#6b7280" text-anchor="middle">Antes y después - Protección Cerámica</text>
+  
+</svg>
