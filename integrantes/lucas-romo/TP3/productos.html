@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Catálogo de Productos | Chiavetta Detailing</title>
+        <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Saltar al contenido principal</a>
+        <header id="top" class="header">
+            <div class="header__marca">
+                <a href="index.html" aria-label="Chiavetta Detailing - Ir al inicio">
+                    <img src="img/logo.svg" alt="Logo de Chiavetta Detailing" width="48" height="48">
+        Chiavetta Detailing
+      </a>
+            </div>
+            <nav class="header__nav" aria-label="Navegación principal">
+                <ul class="header__lista">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="servicios.html">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="productos.html" aria-current="page">Productos</a>
+                    </li>
+                    <li>
+                        <a href="consignacion.html">Consignación</a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                <li class="header__carrito">
+                    <a href="carrito.html" aria-label="Ver carrito de compras">
+                        <img src="img/icono-carrito.svg" alt="" width="24" height="24">
+                        Carrito
+                    </a>
+                </li>
+                </ul>
+            </nav>
+            <a href="carrito.html" aria-label="Ver carrito de compras">
+                <img src="img/icono-carrito.svg" alt="" width="24" height="24">
+      Carrito
+    </a>
+        </header>
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+            <ul class="breadcrumb__lista">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>Productos</li>
+            </ul>
+        </nav>
+        <main id="main" class="main" tabindex="-1">
+            <p>Catálogo de ejemplo: el buscador está representado, pero todavía no filtra productos.</p>
+            <h1>Catálogo de productos</h1>
+            <p>Productos e instrumentos profesionales para el cuidado automotor. Explorá las categorías del catálogo.</p>
+            <search class="search">
+            <form class="search__form" action="productos.html" method="get">
+                <label for="buscador-productos">Buscar productos</label>
+                <input type="text" id="buscador-productos" name="q">
+                <button type="submit">Buscar</button>
+            </form>
+        </search>
+            <nav aria-label="Categorías de productos" class="categorias">
+                <ul class="categorias__lista">
+                    <li>
+                        <a href="#ceras-selladores">Ceras y selladores</a>
+                    </li>
+                    <li>
+                        <a href="#cuidado-interior">Cuidado de interior</a>
+                    </li>
+                    <li>
+                        <a href="#herramientas">Herramientas y accesorios</a>
+                    </li>
+                </ul>
+            </nav>
+            <section id="ceras-selladores">
+                <h2>Ceras y selladores</h2>
+                <ul class="lista-tarjetas">
+                    <li>
+                        <article class="tarjeta">
+                            <img src="img/producto-cera-1.svg" alt="" width="300">
+                            <h3>Cera Carnauba Premium</h3>
+                            <p>Cera en pasta de carnauba brasileña T1 para un brillo profundo tipo "wet look".</p>
+                            <p>Precio anterior: $55.000.  $45.000</p>
+                            <a href="producto-detalle.html">Ver producto</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="tarjeta">
+                            <img src="img/producto-shield.svg" alt="" width="300">
+                            <h3>Ceramic Shield 9H</h3>
+                            <p>Recubrimiento cerámico de grado profesional con hasta 5 años de protección.</p>
+                            <p class="tarjeta__precio">$52.000</p>
+                            <a href="contacto.html">Consultar por este producto</a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section id="cuidado-interior">
+                <h2>Cuidado de interior</h2>
+                <ul class="lista-tarjetas">
+                    <li>
+                        <article class="tarjeta">
+                            <img src="img/producto-kit-interior.svg" alt="" width="300">
+                            <h3>Kit de Mantenimiento de Interior</h3>
+                            <p>Acondicionador de cueros y protector UV para tapizados y plásticos internos.</p>
+                            <p class="tarjeta__precio">$21.000</p>
+                            <a href="contacto.html">Consultar por este producto</a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+            <section id="herramientas">
+                <h2>Herramientas y accesorios</h2>
+                <ul class="lista-tarjetas">
+                    <li>
+                        <article class="tarjeta">
+                            <img src="img/producto-spray.svg" alt="" width="300">
+                            <h3>SiO2 Detail Spray</h3>
+                            <p>Sellador rápido en spray para mantenimiento entre lavados.</p>
+                            <p class="tarjeta__precio">$18.500</p>
+                            <a href="contacto.html">Consultar por este producto</a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__marca">
+                <img src="img/logo.svg" alt="" width="40" height="40">
+                <p>Chiavetta DetailingEstética y cuidado automotriz de alta gama en Córdoba.</p>
+            </div>
+            <nav class="footer__nav" aria-label="Enlaces del pie de página">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="servicios.html">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="productos.html">Productos</a>
+                    </li>
+                    <li>
+                        <a href="consignacion.html">Consignación</a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="footer__datos">
+                <p>Barrio San Lorenzo, Córdoba, Argentina</p>
+                <p>
+                    <a href="tel:+543513090597">+54 351 309 0597</a>
+                </p>
+                <p>
+                    <a href="mailto:santinoch92@gmail.com">santinoch92@gmail.com</a>
+                </p>
+            </address>
+            <p>© 2026 Chiavetta Detailing. Todos los derechos reservados. <a href="#top">Volver arriba</a>
+            </p>
+        </footer>
+    </body>
+</html>
