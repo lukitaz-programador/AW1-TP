@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chiavetta Detailing - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f0f1f2",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#ffc2a7",
+                        "on-primary-fixed-variant": "#004491",
+                        "on-surface": "#191c1d",
+                        "on-secondary-fixed-variant": "#00531a",
+                        "secondary-fixed-dim": "#66df75",
+                        "secondary": "#006e25",
+                        "on-surface-variant": "#424752",
+                        "secondary-container": "#80f98b",
+                        "tertiary-container": "#983c00",
+                        "on-tertiary-fixed-variant": "#7b2f00",
+                        "inverse-primary": "#acc7ff",
+                        "secondary-fixed": "#83fc8e",
+                        "outline": "#727784",
+                        "surface-container": "#edeeef",
+                        "inverse-surface": "#2e3132",
+                        "error-container": "#ffdad6",
+                        "background": "#f8f9fa",
+                        "on-primary-container": "#bbd0ff",
+                        "primary-fixed-dim": "#acc7ff",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface-bright": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "primary": "#003f87",
+                        "surface": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb694",
+                        "surface-tint": "#115cb9",
+                        "on-primary-fixed": "#001a40",
+                        "primary-fixed": "#d7e2ff",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary": "#722b00",
+                        "on-secondary-container": "#007327",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#351000",
+                        "primary-container": "#0056b3",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c2c6d4",
+                        "on-secondary-fixed": "#002106",
+                        "surface-dim": "#d9dadb",
+                        "tertiary-fixed": "#ffdbcc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "max-width": "1280px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-sm": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface text-on-surface font-body-md text-body-md docked full-width top-0 border-b border-outline-variant flat no shadows sticky z-50">
+<div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-max-width mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant border border-outline-variant"></div>
+<div class="text-headline-sm font-headline-sm font-bold text-on-surface">Chiavetta Detailing</div>
+</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface font-bold border-b-2 border-on-surface hover:text-on-surface transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Shop</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-surface-container-low py-[120px] px-margin-desktop text-center border-b border-outline-variant">
+<div class="max-w-max-width mx-auto">
+<h1 class="font-headline-lg text-headline-lg mb-base text-on-surface">Brillo y Protección Profesional</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-[32px] max-w-2xl mx-auto">
+                    Elevamos el estándar del cuidado automotriz con tecnología avanzada y precisión obsesiva para resultados inigualables.
+                </p>
+<div class="flex justify-center mb-[32px]">
+<button class="bg-inverse-surface text-inverse-on-surface py-4 px-8 rounded-full font-bold flex items-center gap-2 hover:bg-on-surface transition-colors">
+                        Agendar Turno
+                        <span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+<div class="w-full h-[400px] bg-surface-variant border border-outline-variant flex items-center justify-center rounded-lg">
+<span class="text-on-surface-variant font-headline-md text-headline-md">Hero Background Image</span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-[80px] px-margin-desktop bg-surface max-w-max-width mx-auto">
+<div class="text-center mb-[48px]">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-base">Nuestros Servicios</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    Soluciones de alta gama diseñadas para restaurar, proteger y mantener el acabado de su vehículo al más alto nivel.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Service 1 (Large) -->
+<div class="col-span-1 md:col-span-8 bg-surface-container-low border border-outline-variant rounded-DEFAULT flex flex-col md:flex-row overflow-hidden hover:border-outline transition-colors">
+<div class="w-full md:w-1/2 h-64 md:h-auto bg-surface-variant flex items-center justify-center border-b md:border-b-0 md:border-r border-outline-variant relative">
+<span class="absolute top-4 left-4 bg-surface text-on-surface px-2 py-1 text-[12px] font-bold border border-outline-variant rounded-full">Tratamiento Cerámico</span>
+<span class="text-on-surface-variant">Image Placeholder</span>
+</div>
+<div class="w-full md:w-1/2 p-[32px] flex flex-col justify-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-base">Protección Extrema</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-[24px]">Blindaje nanotecnológico que ofrece resistencia superior contra rayones, químicos y rayos UV, garantizando un brillo profundo por años.</p>
+<a class="flex items-center gap-1 font-bold text-on-surface hover:opacity-80 transition-opacity w-fit" href="#">
+                            Explorar Tratamientos <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2 (Medium) -->
+<div class="col-span-1 md:col-span-4 bg-surface-container-low border border-outline-variant rounded-DEFAULT flex flex-col overflow-hidden hover:border-outline transition-colors">
+<div class="w-full h-48 bg-surface-variant flex flex-col relative border-b border-outline-variant">
+<div class="absolute inset-0 flex">
+<div class="w-1/2 h-full border-r border-outline-variant flex items-end p-2 justify-start">
+<span class="text-[12px] font-bold text-on-surface bg-surface px-2 py-1 rounded border border-outline-variant">Antes</span>
+</div>
+<div class="w-1/2 h-full flex items-end p-2 justify-end">
+<span class="text-[12px] font-bold text-on-surface bg-surface px-2 py-1 rounded border border-outline-variant">Después</span>
+</div>
+</div>
+</div>
+<div class="p-[24px] flex flex-col flex-grow">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider mb-2 bg-surface-variant px-2 py-1 w-fit rounded">Pulidos</span>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-2">Corrección de Barniz</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant mb-4 flex-grow">Restauración de la claridad óptica eliminando micro-rayas y hologramas.</p>
+<a class="flex items-center gap-1 font-bold text-on-surface text-[14px] hover:opacity-80 transition-opacity w-fit" href="#">
+                            Ver proceso <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3 (Medium) -->
+<div class="col-span-1 md:col-span-4 bg-surface-container-low border border-outline-variant rounded-DEFAULT flex flex-col overflow-hidden hover:border-outline transition-colors">
+<div class="w-full h-48 bg-surface-variant flex items-center justify-center border-b border-outline-variant">
+<div class="w-24 h-24 rounded-full border-2 border-outline-variant bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[48px] text-on-surface">water_drop</span>
+</div>
+</div>
+<div class="p-[24px] flex flex-col flex-grow">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider mb-2 bg-surface-variant px-2 py-1 w-fit rounded">Lavados</span>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-2">Lavado Detallado</h3>
+<p class="font-body-md text-[14px] text-on-surface-variant mb-4 flex-grow">Limpieza profunda y segura con método de dos baldes y pH neutro.</p>
+<a class="flex items-center gap-1 font-bold text-on-surface text-[14px] hover:opacity-80 transition-opacity w-fit" href="#">
+                            Agendar <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 4 (Large) -->
+<div class="col-span-1 md:col-span-8 bg-surface-container-low border border-outline-variant rounded-DEFAULT flex flex-col md:flex-row overflow-hidden hover:border-outline transition-colors">
+<div class="w-full md:w-1/2 p-[32px] flex flex-col justify-center order-2 md:order-1">
+<span class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider mb-2 bg-surface-variant px-2 py-1 w-fit rounded">Interiores</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-base">Renovación de Habitáculo</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-[24px]">Limpieza a vapor, extracción de tapizados y acondicionamiento de cueros con protección UV de grado aeronáutico.</p>
+<a class="flex items-center gap-1 font-bold text-on-surface hover:opacity-80 transition-opacity w-fit" href="#">
+                            Ver Opciones <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-auto bg-surface-variant flex items-center justify-center border-b md:border-b-0 md:border-l border-outline-variant order-1 md:order-2">
+<span class="text-on-surface-variant">Image Placeholder</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant text-on-surface font-body-md text-body-md mt-auto">
+<div class="w-full px-margin-desktop py-20 flex flex-col md:flex-row justify-between gap-gutter max-w-max-width mx-auto">
+<div class="flex flex-col gap-4 max-w-sm">
+<a class="flex items-center gap-3" href="#">
+<div class="w-10 h-10 rounded-full bg-surface-variant border border-outline-variant"></div>
+<span class="font-headline-sm text-[20px] text-on-surface font-bold">Chiavetta Detailing</span>
+</a>
+<p class="text-on-surface-variant text-sm">
+                    Estudio de estética vehicular de alta gama. Precisión, protección y pasión por los detalles.
+                </p>
+<div class="flex gap-4 mt-2">
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface hover:bg-outline-variant transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface hover:bg-outline-variant transition-colors" href="#">
+<span class="material-symbols-outlined">thumb_up</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center text-on-surface hover:bg-outline-variant transition-colors" href="#">
+<span class="material-symbols-outlined">chat</span>
+</a>
+</div>
+</div>
+<div class="flex gap-[64px] flex-col md:flex-row">
+<div class="flex flex-col gap-2">
+<h4 class="font-headline-sm text-[18px] text-on-surface mb-2">Contacto</h4>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Av. Libertador 1234, CABA
+                    </a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">call</span> +54 9 11 1234-5678
+                    </a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[18px]">mail</span> info@chiavettadetailing.com
+                    </a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-headline-sm text-[18px] text-on-surface mb-2">Legal</h4>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">FAQ</a>
+</div>
+</div>
+</div>
+<div class="w-full text-center py-4 border-t border-outline-variant text-on-surface-variant text-sm">
+            © 2024 Chiavetta Detailing. Precision Protection.
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wireframe - Chiavetta Detailing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    "wire-bg": "#f5f5f5",
+                    "wire-surface": "#ffffff",
+                    "wire-surface-alt": "#e5e5e5",
+                    "wire-border": "#cccccc",
+                    "wire-text-primary": "#1a1a1a",
+                    "wire-text-secondary": "#666666",
+                    "wire-accent": "#333333",
+                    "wire-on-accent": "#ffffff",
+                },
+                fontFamily: {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-sm": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "label-caps": ["Inter"]
+                }
+            }
+        }
+    }
+</script>
+<style>
+    .custom-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    .custom-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    body {
+        min-height: 100dvh;
+        max-width: 375px;
+        margin: 0 auto;
+        position: relative;
+        background-color: #f5f5f5;
+    }
+</style>
+</head>
+<body class="bg-wire-bg text-wire-text-primary antialiased pb-24 md:pb-0 shadow-lg border-x border-wire-border">
+<!-- TopNavBar -->
+<header class="bg-wire-surface border-b border-wire-border sticky top-0 z-40">
+<div class="flex justify-between items-center px-4 py-4 w-full mx-auto">
+<!-- Brand -->
+<div class="text-headline-sm font-headline-sm font-bold text-wire-text-primary flex items-center gap-2">
+<div class="h-10 w-10 bg-wire-surface-alt rounded-full flex items-center justify-center border border-wire-border">
+<span class="material-symbols-outlined text-wire-text-secondary text-sm">image</span>
+</div>
+            Chiavetta Detailing
+        </div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="text-wire-text-primary flex items-center justify-center w-10 h-10 rounded-full">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-[530px] min-h-[400px] flex items-end pb-12 px-4 bg-wire-surface-alt border-b border-wire-border">
+<div class="absolute inset-0 flex items-center justify-center text-wire-text-secondary opacity-50">
+<span class="material-symbols-outlined text-6xl">image</span>
+</div>
+<div class="relative z-10 w-full flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<span class="inline-flex items-center px-3 py-1 bg-wire-surface border border-wire-border text-wire-text-primary rounded-full text-label-caps font-label-caps uppercase w-max">
+                Precision Protection
+            </span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-wire-text-primary">
+                Lab-Grade<br/>Automotive Care.
+            </h1>
+<p class="font-body-lg text-body-lg text-wire-text-secondary max-w-sm">
+                Engineered ceramic coatings and advanced paint correction for discerning owners.
+            </p>
+</div>
+<div class="flex gap-4 w-full">
+<button class="flex-1 bg-wire-accent text-wire-on-accent font-headline-sm text-[16px] py-4 px-6 rounded-DEFAULT flex items-center justify-center gap-2">
+                Book Service
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-12 px-4 flex flex-col gap-8 bg-wire-bg">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-wire-text-primary">Core Services</h2>
+<p class="font-body-md text-body-md text-wire-text-secondary">Advanced solutions for perfect surfaces.</p>
+</div>
+<div class="grid grid-cols-1 gap-4">
+<!-- Service Card 1 -->
+<div class="bg-wire-surface border border-wire-border rounded-lg p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-wire-surface-alt border border-wire-border flex items-center justify-center text-wire-text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">local_car_wash</span>
+</div>
+<span class="px-2 py-1 bg-wire-accent text-wire-on-accent rounded-full text-[10px] font-bold uppercase tracking-wider">Premium</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-wire-text-primary mb-2">Ceramic Coating</h3>
+<p class="font-body-md text-body-md text-wire-text-secondary">Multi-year hydrophobic protection bonding at the molecular level.</p>
+</div>
+<div class="flex gap-2 mt-2 flex-wrap">
+<span class="px-3 py-1 bg-wire-surface-alt border border-wire-border text-wire-text-secondary rounded-full text-label-caps font-label-caps">9H Hardness</span>
+<span class="px-3 py-1 bg-wire-surface-alt border border-wire-border text-wire-text-secondary rounded-full text-label-caps font-label-caps">5-Yr Warranty</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-wire-surface border border-wire-border rounded-lg p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 rounded-full bg-wire-surface-alt border border-wire-border flex items-center justify-center text-wire-text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-wire-text-primary mb-2">Paint Correction</h3>
+<p class="font-body-md text-body-md text-wire-text-secondary">Multi-stage machine compounding to remove defects and holograms.</p>
+</div>
+<div class="flex gap-2 mt-2 flex-wrap">
+<span class="px-3 py-1 bg-wire-surface-alt border border-wire-border text-wire-text-secondary rounded-full text-label-caps font-label-caps">Swirl Removal</span>
+<span class="px-3 py-1 bg-wire-surface-alt border border-wire-border text-wire-text-secondary rounded-full text-label-caps font-label-caps">Mirror Finish</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Highlights (Horizontal Scroll) -->
+<section class="py-12 pl-4 flex flex-col gap-8 bg-wire-bg border-t border-wire-border">
+<div class="pr-4 flex justify-between items-end">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-headline-md text-wire-text-primary">Pro Shop</h2>
+<p class="font-body-md text-body-md text-wire-text-secondary">Maintenance products.</p>
+</div>
+<button class="text-wire-text-primary font-bold text-sm uppercase tracking-wider flex items-center gap-1">
+            View All <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="flex gap-4 overflow-x-auto custom-scrollbar pb-4 pr-4">
+<!-- Product 1 -->
+<div class="min-w-[240px] bg-wire-surface border border-wire-border rounded-lg flex flex-col overflow-hidden">
+<div class="h-40 w-full bg-wire-surface-alt relative flex items-center justify-center text-wire-text-secondary">
+<span class="material-symbols-outlined text-4xl">image</span>
+<div class="absolute top-2 right-2 bg-wire-accent text-wire-on-accent px-2 py-1 rounded text-[10px] font-bold uppercase">In Stock</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h4 class="font-headline-sm text-[18px] text-wire-text-primary leading-tight">SiO2 Detail Spray</h4>
+<p class="font-body-md text-sm text-wire-text-secondary">Ceramic maintenance.</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-headline-sm text-[16px] text-wire-text-primary">$24.99</span>
+<button class="w-8 h-8 rounded-full bg-wire-accent text-wire-on-accent flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="min-w-[240px] bg-wire-surface border border-wire-border rounded-lg flex flex-col overflow-hidden">
+<div class="h-40 w-full bg-wire-surface-alt relative flex items-center justify-center text-wire-text-secondary">
+<span class="material-symbols-outlined text-4xl">image</span>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<h4 class="font-headline-sm text-[18px] text-wire-text-primary leading-tight">Edgeless Microfiber</h4>
+<p class="font-body-md text-sm text-wire-text-secondary">500 GSM, 4-Pack.</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-headline-sm text-[16px] text-wire-text-primary">$18.00</span>
+<button class="w-8 h-8 rounded-full bg-wire-accent text-wire-on-accent flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full max-w-[375px] flex justify-around items-center px-4 py-2 bg-wire-surface border-t border-wire-border z-50">
+<a class="flex flex-col items-center justify-center bg-wire-surface-alt text-wire-text-primary rounded-full px-4 py-1 scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-wire-text-secondary px-4 py-1 rounded-full" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-label-caps text-label-caps mt-1">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center text-wire-text-secondary px-4 py-1 rounded-full" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-caps text-label-caps mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-wire-text-secondary px-4 py-1 rounded-full" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-label-caps mt-1">Account</span>
+</a>
+</nav>
+</body></html>

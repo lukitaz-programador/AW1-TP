@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail - Chiavetta Detailing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Montserrat:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#0a0a0a",
+                        "on-background": "#ffffff",
+                        "surface": "#131313",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#393939",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-container": "#202020",
+                        "surface-container-high": "#2b2b2b",
+                        "surface-container-highest": "#363636",
+                        "on-surface": "#ffffff",
+                        "on-surface-variant": "#c4c7c5",
+                        "outline": "#8e918f",
+                        "outline-variant": "#444746",
+                        "primary": "#e30613",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#4a0002",
+                        "on-primary-container": "#ffdad5",
+                        "primary-fixed": "#ffdad5",
+                        "on-primary-fixed-variant": "#930006",
+                        "secondary": "#e30613",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#1e3a1f",
+                        "on-secondary-container": "#80f98b",
+                        "inverse-surface": "#e2e2e2",
+                        "inverse-on-surface": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-sm": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-caps": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); font-family: theme('fontFamily.body-md'); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .material-symbols-outlined.filled { font-variation-settings: 'FILL' 1; }
+        /* Hide scrollbar for clean horizontal scrolling */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased pb-24">
+<!-- Top App Bar (Mobile back navigation) -->
+<header class="fixed top-0 w-full z-40 bg-surface/90 backdrop-blur-md border-b border-outline-variant/50">
+<div class="flex items-center justify-between px-margin-mobile h-16">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Product Image Gallery -->
+<section class="mt-16 w-full h-[442px] bg-surface-container-lowest relative">
+<img class="w-full h-full object-cover" data-alt="Official brand logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2JvCuIXYo4NZZvTZVkNV_kkPADvFWsEgZ795O5YDolptXH0hFuN5HtBkUHWA_W21DPCS8qszUE4STBpJ1kSvTNxLjEPkD3fzf0MdG0A3_MWD4FDno_7e5za61zs0JgQJvz8cKCEbJcgZ2VCgY1pidY740q0TlI1rkdfn23HXRCLKwh8oVq76Sz7ZAqVSUkbulZst0Dd1oah6BCDCAVs6AMm8kE0Dp7JujRXYo2XgJ5l8O49Lhx1ba27CrEAKeP-huVg"/>
+<!-- Pagination Dots -->
+<div class="absolute bottom-4 left-0 w-full flex justify-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+</section>
+<!-- Product Info Sheet -->
+<main class="px-margin-mobile pt-6">
+<!-- Chips/Badges -->
+<div class="flex gap-2 mb-3 overflow-x-auto no-scrollbar">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-caps text-label-caps whitespace-nowrap">Professional Grade</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps whitespace-nowrap">In Stock</span>
+</div>
+<!-- Title & Price -->
+<div class="flex justify-between items-start gap-4 mb-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Ceramic Shield 9H</h1>
+<div class="text-right">
+<span class="block font-headline-sm text-headline-sm text-primary">$149.99</span>
+</div>
+</div>
+<!-- Rating -->
+<div class="flex items-center gap-1 mb-6">
+<div class="flex text-primary">
+<span class="material-symbols-outlined filled text-sm">star</span>
+<span class="material-symbols-outlined filled text-sm">star</span>
+<span class="material-symbols-outlined filled text-sm">star</span>
+<span class="material-symbols-outlined filled text-sm">star</span>
+<span class="material-symbols-outlined filled text-sm">star_half</span>
+</div>
+<span class="font-body-md text-sm text-on-surface-variant ml-1">4.8 (124 reviews)</span>
+</div>
+<!-- Description -->
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+            Advanced nano-ceramic formula providing up to 5 years of durable protection against UV rays, chemical stains, and micro-scratches. Engineered for professional detailers but accessible for serious enthusiasts.
+        </p>
+<!-- Variants / Options -->
+<div class="mb-8 border-t border-outline-variant pt-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4">Select Size</h3>
+<div class="flex gap-3">
+<button class="flex-1 py-3 border-2 border-primary rounded-lg bg-primary/10 font-body-md text-body-md text-primary font-bold text-center">50ml<br/><span class="text-sm font-normal text-on-surface-variant">Standard</span></button>
+<button class="flex-1 py-3 border border-outline-variant rounded-lg bg-surface text-on-surface font-body-md text-body-md text-center">100ml<br/><span class="text-sm text-on-surface-variant">Pro Size</span></button>
+</div>
+</div>
+<!-- Quantity & Add to Cart (Fixed Bottom Action Area above Nav) -->
+<div class="fixed bottom-[72px] left-0 w-full bg-surface/95 backdrop-blur-md border-t border-outline-variant p-margin-mobile flex gap-4 z-40">
+<div class="flex items-center border border-outline-variant rounded-lg bg-surface">
+<button class="w-12 h-12 flex items-center justify-center text-on-surface"><span class="material-symbols-outlined">remove</span></button>
+<span class="w-8 text-center font-body-lg text-body-lg text-on-surface font-bold">1</span>
+<button class="w-12 h-12 flex items-center justify-center text-on-surface"><span class="material-symbols-outlined">add</span></button>
+</div>
+<button class="flex-1 bg-primary text-on-primary rounded-lg font-headline-sm text-headline-sm text-[18px] hover:opacity-90 transition-opacity flex items-center justify-center gap-2 shadow-[0_4px_14px_0_rgba(227,6,19,0.39)]">
+<span class="material-symbols-outlined">shopping_cart</span> Add to Cart
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-2 bg-surface border-t border-outline-variant shadow-lg z-50">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high w-16 h-14 rounded-xl" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-caps text-label-caps mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high w-16 h-14 rounded-xl" href="#">
+<span class="material-symbols-outlined">build</span>
+<span class="font-label-caps text-label-caps mt-1">Services</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 w-16 h-14 transition-all scale-90" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-label-caps text-label-caps mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high w-16 h-14 rounded-xl" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-caps text-label-caps mt-1">Account</span>
+</a>
+</nav>
+<div class="h-[144px]"></div> <!-- Spacer for fixed bottom elements -->
+</body></html>
