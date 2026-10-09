@@ -1,6 +1,4 @@
-/* =========================
-GENERICOS
-========================= */
+/* Estilos generales */
 
 * {
     box-sizing: border-box;
@@ -48,9 +46,7 @@ button {
     cursor: pointer;
 }
 
-/* =========================
-ACCESO RAPIDO
-========================= */
+/* Acceso rápido */
 
 .skip-link {
     position: absolute;
@@ -66,9 +62,7 @@ ACCESO RAPIDO
     left: 8px;
 }
 
-/* =========================
-HEADER
-========================= */
+/* Encabezado */
 
 .header {
     display: flex;
@@ -133,9 +127,7 @@ HEADER
     width: 24px;
 }
 
-/* =========================
-NAVEGACION SECUNDARIA
-========================= */
+/* Navegación secundaria */
 
 .breadcrumb {
     max-width: 1200px;
@@ -170,9 +162,7 @@ NAVEGACION SECUNDARIA
     background: #1b1b1b;
 }
 
-/* =========================
-CONTENIDO
-========================= */
+/* Contenido principal */
 
 .main {
     width: min(1200px, 88%);
@@ -202,9 +192,7 @@ CONTENIDO
     color: #cccccc;
 }
 
-/* =========================
-INICIO
-========================= */
+/* Inicio */
 
 .hero {
     display: grid;
@@ -259,9 +247,7 @@ INICIO
     text-align: center;
 }
 
-/* =========================
-TARJETAS
-========================= */
+/* Tarjetas */
 
 .lista-tarjetas {
     display: grid;
@@ -313,9 +299,7 @@ TARJETAS
     font-weight: bold;
 }
 
-/* =========================
-DETALLES
-========================= */
+/* Detalles */
 
 .detalle {
     display: grid;
@@ -340,9 +324,7 @@ DETALLES
     color: #cccccc;
 }
 
-/* =========================
-BUSQUEDA Y FORMULARIOS
-========================= */
+/* Búsqueda y formularios */
 
 .search {
     margin: 28px 0;
@@ -413,9 +395,7 @@ BUSQUEDA Y FORMULARIOS
     border-color: #ffffff;
 }
 
-/* =========================
-CONTACTO
-========================= */
+/* Contacto */
 
 .contacto {
     display: grid;
@@ -438,9 +418,7 @@ CONTACTO
     margin: 0 0 12px;
 }
 
-/* =========================
-CARRITO
-========================= */
+/* Carrito */
 
 .carrito__articulos {
     display: grid;
@@ -483,9 +461,7 @@ CARRITO
     padding-left: 20px;
 }
 
-/* =========================
-PIE
-========================= */
+/* Pie de página */
 
 .footer {
     display: grid;
@@ -527,9 +503,7 @@ PIE
     color: #aaaaaa;
 }
 
-/* =========================
-ACCESIBILIDAD
-========================= */
+/* Accesibilidad */
 
 a:focus-visible,
 button:focus-visible,
@@ -540,9 +514,7 @@ textarea:focus-visible {
     outline-offset: 2px;
 }
 
-/* =========================
-RESPONSIVE
-========================= */
+/* Diseño responsive */
 
 @media (max-width: 900px) {
     .header {
