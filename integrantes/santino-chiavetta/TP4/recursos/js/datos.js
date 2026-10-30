@@ -1,0 +1,44 @@
+// Lista de productos, como en los ejercicios del catálogo.
+const productosCatalogo = [
+    {
+        "id": "cera-carnauba",
+        "nombre": "Cera Carnauba Premium",
+        "categoria": "ceras-selladores",
+        "descripcion": "Cera líquida con blend de carnauba para aportar brillo y ayudar a proteger la pintura entre lavados.",
+        "precio": 45000,
+        "precioAnterior": 55000,
+        "imagen": "recursos/img/cera-carnauba.jpg",
+        "detalle": "producto-detalle.html?id=cera-carnauba"
+    },
+    {
+        "id": "ceramic-shield",
+        "nombre": "Vitrificador Cerámico Vonixx V-Paint",
+        "categoria": "ceras-selladores",
+        "descripcion": "Vitrificador para pintura de aplicación profesional que aporta protección y facilita el mantenimiento de la superficie.",
+        "precio": 52000,
+        "imagen": "recursos/img/ceramico.jpeg",
+        "detalle": "producto-detalle.html?id=ceramic-shield"
+    },
+    {
+        "id": "kit-interior",
+        "nombre": "Kit de Mantenimiento de Interior",
+        "categoria": "cuidado-interior",
+        "descripcion": "Acondicionador de cueros y protector UV para tapizados y plásticos internos.",
+        "precio": 21000,
+        "imagen": "recursos/img/mantenimiento-kit.jpg",
+        "detalle": "producto-detalle.html?id=kit-interior"
+    },
+    {
+        "id": "detail-spray",
+        "nombre": "SiO2 Detail Spray",
+        "categoria": "ceras-selladores",
+        "descripcion": "Sellador rápido en spray para mantenimiento entre lavados.",
+        "precio": 18500,
+        "imagen": "recursos/img/sio2.jpg",
+        "detalle": "producto-detalle.html?id=detail-spray"
+    }
+];
+
+function obtenerProductos() {
+    return productosCatalogo;
+}
