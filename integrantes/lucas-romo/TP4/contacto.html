@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contacto | Chiavetta Detailing</title>
+        <link rel="icon" href="recursos/img/favicon.png" type="image/png">
+        <link rel="stylesheet" href="./recursos/css/style.css">
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Saltar al contenido principal</a>
+        <header id="top" class="header">
+            <div class="header__marca">
+                <a href="index.html" aria-label="Chiavetta Detailing - Ir al inicio">
+                    <img src="recursos/img/logo.png" alt="Logo de Chiavetta Detailing" width="48" height="48">
+        Chiavetta Detailing
+      </a>
+            </div>
+            <nav class="header__nav" aria-label="Navegación principal">
+                <ul class="header__lista">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="servicios.html">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="productos.html">Productos</a>
+                    </li>
+                    <li>
+                        <a href="consignacion.html">Consignación</a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" aria-current="page">Contacto</a>
+                    </li>
+                <li class="header__carrito">
+                    <a href="carrito.html" aria-label="Ver carrito de compras">
+                        <img src="recursos/img/carrito.png" alt="" width="24" height="24">
+                        Carrito
+                    </a>
+                </li>
+                </ul>
+            </nav>
+        </header>
+        <nav class="breadcrumb" aria-label="Ruta de navegación">
+            <ul class="breadcrumb__lista">
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>Contacto</li>
+            </ul>
+        </nav>
+        <main id="main" class="main" tabindex="-1">
+            
+            <h1>Contacto</h1>
+            <section class="seccion">
+                <h2>Formulario de contacto</h2>
+                <form class="formulario" action="contacto.html" method="post">
+                    <p>Tus datos</p>
+                    <p>
+                        <label for="nombre">Nombre y apellido</label>
+                        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="80">
+                    </p>
+                    <p>
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9+\(\) \-]{8,20}" title="Ingresá un teléfono válido">
+                    </p>
+                    <p>Tu consulta</p>
+                    <p>
+                        <label for="motivo">Motivo de consulta</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Seleccioná una opción</option>
+                            <option value="lavados">Lavados</option>
+                            <option value="pulido-proteccion">Pulido y protección</option>
+                            <option value="interior">Interior</option>
+                            <option value="productos">Productos</option>
+                            <option value="consignacion">Consignación de vehículos</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" required minlength="10" maxlength="1000"></textarea>
+                    </p>
+                    <button type="submit">Enviar consulta</button>
+                </form>
+            </section>
+            <section class="seccion">
+                <h2>Ubicación y contacto directo</h2>
+                <address class="contacto__datos">
+                    <p>Barrio San Lorenzo, Córdoba, Argentina</p>
+                    <p>Teléfono: <a href="tel:+543513090597">+54 351 309 0597</a>
+                    </p>
+                    <p>Email: <a href="mailto:santinoch92@gmail.com">santinoch92@gmail.com</a>
+                    </p>
+                </address>
+            </section>
+        </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__marca">
+                <img src="recursos/img/logo.png" alt="" width="40" height="40">
+                <p>Chiavetta Detailing — Estética y cuidado automotriz de alta gama en Córdoba.</p>
+            </div>
+            <nav class="footer__nav" aria-label="Enlaces del pie de página">
+                <ul>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="servicios.html">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="productos.html">Productos</a>
+                    </li>
+                    <li>
+                        <a href="consignacion.html">Consignación</a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <address class="footer__datos">
+                <p>Barrio San Lorenzo, Córdoba, Argentina</p>
+                <p>
+                    <a href="tel:+543513090597">+54 351 309 0597</a>
+                </p>
+                <p>
+                    <a href="mailto:santinoch92@gmail.com">santinoch92@gmail.com</a>
+                </p>
+            </address>
+            <p class="footer__final">© 2026 Chiavetta Detailing. Todos los derechos reservados. <a href="#top">Volver arriba</a>
+            </p>
+        </footer>
+        <a class="carrito-flotante" href="carrito.html" aria-label="Ver carrito de compras">
+            <img src="recursos/img/carrito.png" alt="" width="30" height="30">
+            <span>Carrito</span>
+        </a>
+        <noscript><p class="main__aviso">Activá JavaScript para buscar productos, agregarlos al carrito y usar los formularios.</p></noscript>
+        <script src="recursos/js/datos.js"></script>
+        <script src="recursos/js/validaciones.js"></script>
+        <script src="recursos/js/app.js"></script>
+    </body>
+</html>
