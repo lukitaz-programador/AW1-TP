@@ -1,5 +1,5 @@
 // Validaciones y mensajes comunes para los formularios.
-function mostrarMensaje(formulario, texto, tipo = "exito") {
+export function mostrarMensaje(formulario, texto, tipo = "exito") {
     let mensaje = formulario.querySelector(".mensaje-formulario");
     if (!mensaje) {
         mensaje = document.createElement("p");
@@ -11,7 +11,7 @@ function mostrarMensaje(formulario, texto, tipo = "exito") {
     mensaje.dataset.tipo = tipo;
 }
 
-function validarFormulario(formulario) {
+export function validarFormulario(formulario) {
     for (const campo of formulario.querySelectorAll('input, textarea')) {
         campo.setCustomValidity('');
         if (['text', 'email', 'tel', 'textarea'].includes(campo.type)) {

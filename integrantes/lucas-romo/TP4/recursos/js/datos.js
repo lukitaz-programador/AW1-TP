@@ -39,6 +39,6 @@ const productosCatalogo = [
     }
 ];
 
-function obtenerProductos() {
+export function obtenerProductos() {
     return productosCatalogo;
 }
